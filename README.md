@@ -7,6 +7,17 @@ A lightweight and powerful backpack plugin for Minecraft servers. Give your play
 
 ---
 
+## 🔌 Compatibility & Core Support
+
+| Loader | Compatibility Status | Notes |
+|---|---|---|
+| **Paper / Purpur** | 🟢 **100% Native** | Recommended. Best performance and MiniMessage support. |
+| **Spigot / Bukkit** | 🟢 **100% Native** | Fully compatible. Legacy colors and API work perfectly. |
+| **Folia** | 🟢 **100% Native** | **Fully supported!** Uses region-based scheduling, preventing thread errors. |
+| **Sponge / Modded** | 🟡 **Via Hybrid Loaders** | Works on hybrid servers (like Mohist, Magma, Cardboard, Ketting) that run Bukkit plugins alongside Sponge/Forge. |
+
+---
+
 ## ✨ Features
 
 - **6 backpack sizes** — from 1 row (9 slots) up to 6 rows (54 slots)
