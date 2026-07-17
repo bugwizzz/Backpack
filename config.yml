@@ -1,0 +1,116 @@
+# ============================================================
+#  Backpack Plugin Configuration
+#  All messages support MiniMessage formatting and hex colors.
+#  PlaceholderAPI placeholders are supported if the plugin is installed.
+# ============================================================
+
+# ----------------------------------------------------------
+# Plugin prefix prepended to all messages.
+# Supports MiniMessage formatting.
+# ----------------------------------------------------------
+prefix: "<gradient:#FF6B6B:#4ECDC4><bold>Backpack</bold></gradient> <dark_gray>» <reset>"
+
+# ----------------------------------------------------------
+# Messages
+# All messages support MiniMessage formatting.
+# Use %player% for target player name where applicable.
+# Use %rows% for row count where applicable.
+# ----------------------------------------------------------
+messages:
+  # Sent when a player without any backpack.row.* permission runs /backpack
+  no-permission: "<red>You don't have permission to use a backpack."
+
+  # Sent when a player lacks permission for a specific admin command
+  no-admin-permission: "<red>You don't have permission to do that."
+
+  # Sent after a successful config reload
+  reload-success: "<green>Configuration reloaded successfully!"
+
+  # Sent when target player is not found (never joined the server)
+  player-not-found: "<red>Player <white>%player%</white> was not found."
+
+  # Sent when an admin uses /backpack give
+  give-info: "<yellow>Backpack permissions are managed externally. Grant <white>backpack.row.%rows%</white> to <white>%player%</white> via your permissions plugin."
+
+  # Sent when the plugin is still loading a backpack
+  loading: "<yellow>Loading backpack, please wait..."
+
+  # Sent when a player dies and their backpack is cleared
+  death-clear: "<red>Your backpack has been cleared because you died!"
+
+  # Sent when running command from console without specifying a player
+  console-denied: "<red>You must specify a player when running from console."
+
+# ----------------------------------------------------------
+# GUI / Inventory Settings
+# ----------------------------------------------------------
+gui:
+  # Title of the backpack inventory.
+  # Supports MiniMessage formatting and PlaceholderAPI placeholders.
+  # Use %player% for the backpack owner's name.
+  title: "<gold>%player%'s Backpack"
+
+# ----------------------------------------------------------
+# Sound Settings
+# Use Minecraft sound names (e.g., BLOCK_CHEST_OPEN).
+# Set to "NONE" to disable a sound.
+# ----------------------------------------------------------
+sounds:
+  # Sound played when a backpack is opened
+  open: "BLOCK_CHEST_OPEN"
+
+  # Sound played when a backpack is closed
+  close: "BLOCK_CHEST_CLOSE"
+
+  # Volume of sounds (0.0 - 1.0)
+  volume: 0.7
+
+  # Pitch of sounds (0.5 - 2.0)
+  pitch: 1.0
+
+# ----------------------------------------------------------
+# Storage Settings
+# ----------------------------------------------------------
+storage:
+  # Storage type. Currently only "yaml" is supported.
+  # Each player's data is stored in plugins/Backpack/data/<uuid>.yml
+  type: "yaml"
+
+# ----------------------------------------------------------
+# Auto-Save Settings
+# ----------------------------------------------------------
+autosave:
+  # Whether to enable periodic auto-saving of dirty backpacks
+  enabled: true
+
+  # Interval in seconds between auto-save cycles
+  # Recommended: 300 (5 minutes)
+  interval: 300
+
+# ----------------------------------------------------------
+# Cache Settings
+# ----------------------------------------------------------
+cache:
+  # Minutes of inactivity before a backpack is unloaded from memory.
+  # Only applies to offline players whose backpack is still cached.
+  # Set to 0 to unload immediately when the player disconnects.
+  timeout: 10
+
+  # Interval in seconds between cache cleanup cycles.
+  cleanup-interval: 60
+
+# ----------------------------------------------------------
+# Permission Settings
+# ----------------------------------------------------------
+permissions:
+  # The order in which row permissions are checked.
+  # "highest-first" checks from row.6 down to row.1 (recommended).
+  # "lowest-first" checks from row.1 up to row.6.
+  priority: "highest-first"
+
+# ----------------------------------------------------------
+# Debug Mode
+# ----------------------------------------------------------
+# When enabled, the plugin logs detailed information to the console.
+# Useful for troubleshooting. Disable in production.
+debug: false
