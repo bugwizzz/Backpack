@@ -1,7 +1,5 @@
 # 🎒 Backpack
 
-A lightweight and powerful backpack plugin for Minecraft servers. Give your players a personal virtual backpack with customizable sizes, permissions, and admin tools.
-
 **Supported Loaders:** Bukkit, Spigot, Paper, Purpur, Folia, Sponge
 **Supported Versions:** 1.21.x, 26.1.x, 26.2.x (Java 21+)
 
